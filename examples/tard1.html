@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script type="text/javascript" src="js/Three.js"></script>
+    <script type="text/javascript" src="js/threetard.js"></script>
+</head>
+<body>
+
+<script>
+    
+    var xrot = 0;
+    
+    var update = function(updateState) {
+        ThreeTard.xRotateObject(1, xrot);
+        
+        xrot += 0.01;
+        
+        //console.log("update");
+    };
+    
+    ThreeTard.makeCube(1, 200);
+    
+    ThreeTard.makeSphere(2, 100);
+    
+    ThreeTard.positionObject(2, 100, 150, 0);
+    
+    ThreeTard.controlCameraUsingArrowKeys();
+    
+    ThreeTard.start(update);
+    
+</script>
+</body>
+</html>
